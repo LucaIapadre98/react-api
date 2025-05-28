@@ -28,19 +28,21 @@ export default function Main(){
   return (
     <main>
       <div className="row">
-        <div className="col-3">
-          <div className="card">
-            <div className="card-body">
-              <img src="#" alt=""></img>
-            </div>
-            <div className="card-header">
-              <h5>titolo</h5>
-              <span>data nascita</span>
-              <span>nazione</span>
-              <p>biografia</p>
+        {actorsCharacters.map((character)=> (
+          <div className="col-2" key={character.id}>
+            <div className="card h-100 gap-2 g-5">
+              <div className="card-body">
+                <img src={character.image} alt={character.name}></img>
+               </div>
+              <div className="card-header">
+                <h5 className="card-title">{character.name}</h5>
+                <span className="card-age">{character.birth_year}</span>
+                <span className="card-national">{character.nationality}</span>
+                <p className="card-text">{character.biography}</p>
+              </div>
             </div>
           </div>
-        </div>
+        ))};
       </div>
     </main>
   );

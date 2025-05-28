@@ -19,3 +19,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.card{
+  border-radius: 10px;
+  
+}
