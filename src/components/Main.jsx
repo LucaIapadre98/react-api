@@ -8,22 +8,22 @@ export default function Main(){
   //DICHIARO LO USESTATE PARTENDO DALL'ARRAY VUOTO //
   const [actorsCharacters, setActorsCharacters] = useState([]);
 
-  //DICHIARO LO USEEFFECT //
- useEffect(()=>{
-
-  //CHIAMO AXIOS //
-  axios.get(`${apiUrlActors}/actors`).then(res=>{
-    const{ data }= res;
+  const charactersFunction = () => { 
+    //DOMANDA AD AXIOS //
+    axios.get(`${apiUrlActors}/actors`).then(res=>{
+      const{ data }= res;
     
-    //DESTRUTTURO PER PRENDERE LE CHIAVI CHE MI SERVONO //
-    const charactersChange = data.map((character) => {
-      const { id, name, birth_year, nationality, biography, image} = character;
-      return { id, name, birth_year, nationality, biography, image};
-    });
+      //DESTRUTTURO PER PRENDERE LE CHIAVI CHE MI SERVONO //
+      const charactersChange = data.map((character) => {
+        const { id, name, birth_year, nationality, biography, image} = character;
+        return { id, name, birth_year, nationality, biography, image};
+      });
 
-    setActorsCharacters(charactersChange);
-  });
- }, []);
+      setActorsCharacters(charactersChange);
+    });
+  };
+  //DICHIARO LO USEEFFECT //
+  useEffect(charactersFunction, []);
 
   return (
     <main>
