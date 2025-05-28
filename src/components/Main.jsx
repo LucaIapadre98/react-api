@@ -1,13 +1,15 @@
 import axios from "axios";
 
-const apiUrlActors= "https://lanciweb.github.io/demo/api/actors/";
+const apiUrlActors= "https://lanciweb.github.io/demo/api/";
 
 export default function Main(){
   axios
-  .get(apiUrlActors)
-  .then(res=>
-    console.log(res.data)
-  )
+  .get(`${apiUrlActors}/actors`)
+  .then(res=>{
+    const{ data }= res
+    console.log(data);
+    
+  })
 
   return (
     <main>
