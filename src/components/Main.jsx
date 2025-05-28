@@ -10,7 +10,7 @@ export default function Main(){
 
   //DICHIARO LO USEEFFECT //
  useEffect(()=>{
-  
+
   //CHIAMO AXIOS //
   axios.get(`${apiUrlActors}/actors`).then(res=>{
     const{ data }= res;
