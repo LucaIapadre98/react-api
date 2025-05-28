@@ -13,5 +13,5 @@ export default function Main(){
     <main>
       <h1>Axios</h1>
     </main>
-  )
+  );
 }
