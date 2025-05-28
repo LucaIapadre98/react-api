@@ -11,7 +11,7 @@ export default function Main(){
 
   return (
     <main>
-      <h1>Axios</h1>
+      <h1>Axios React</h1>
     </main>
   );
 }
