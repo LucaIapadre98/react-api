@@ -1,3 +1,17 @@
+import axios from "axios";
+
+const apiUrlActors= "https://lanciweb.github.io/demo/api/actors/";
+
 export default function Main(){
-  return 
+  axios
+  .get(apiUrlActors)
+  .then(res=>
+    console.log(res.data)
+  )
+
+  return (
+    <main>
+      <h1>Axios</h1>
+    </main>
+  )
 }
