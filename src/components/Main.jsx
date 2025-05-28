@@ -27,12 +27,21 @@ export default function Main(){
 
   return (
     <main>
-      <h1>Axios React</h1>
-      <ul>
-        {actorsCharacters.map((character)=>(
-          <li key={character.id}>{character.name}</li>
-        ))}
-      </ul>
+      <div className="row">
+        <div className="col-3">
+          <div className="card">
+            <div className="card-body">
+              <img src="#" alt=""></img>
+            </div>
+            <div className="card-header">
+              <h5>titolo</h5>
+              <span>data nascita</span>
+              <span>nazione</span>
+              <p>biografia</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
